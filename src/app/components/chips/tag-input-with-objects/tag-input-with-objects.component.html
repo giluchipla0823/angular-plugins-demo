@@ -1,0 +1,11 @@
+<div class="form-group tag-input-bs4">
+    <tag-input 
+        [(ngModel)]="items"
+        [editable]="true"
+        [identifyBy]="'id'"
+        [displayBy]="'name'"
+        theme="bootstrap">
+    </tag-input>
+</div>
+
+<pre>{{ items | json }}</pre>

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+.main-container {
+    margin-top: 40px;
+}
+
+.tag-input-bs4 .ng2-tag-input.bootstrap {
+  border: 1px solid #ced4da !important;
+  border-radius: .25rem;
+  padding: 0 !important;
+}
+
+.tag-input-bs4 .ng2-tag-input.bootstrap tag {
+    margin-top: .2rem;
+}
+
+.tag-input-bs4 .ng2-tag-input.bootstrap tag:first-child{
+    margin-left: .3rem;
+}
+
+.tag-input-bs4 .ng2-tag-input.bootstrap .ng2-tags-container {
+    margin-left: .3rem;
+}
+
+.tag-input-bs4 .ng2-tag-input.bootstrap tag .tag-wrapper {
+    margin-top: -.13rem;
+}

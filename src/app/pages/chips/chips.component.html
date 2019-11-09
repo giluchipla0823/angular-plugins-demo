@@ -1,3 +1,18 @@
-<p>chips works!</p>
+<h1>Demo chips</h1>
+<hr />
 
-<app-tag-input></app-tag-input>
+<div class="row">
+    <div class="col-3">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of menu"
+                [routerLinkActiveOptions]="{exact: true}" 
+                routerLinkActive="active" 
+                [routerLink]="[item.path]">{{ item.name }}</li>
+        </ul>
+    </div>
+    <div class="col-9">
+        <h3>{{ title }}</h3>
+        <hr />
+        <router-outlet></router-outlet>
+    </div>
+</div>
