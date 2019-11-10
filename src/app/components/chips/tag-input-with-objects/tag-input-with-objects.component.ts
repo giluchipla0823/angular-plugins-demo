@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TagInputWithObjectsComponent implements OnInit {
   items: any[] = [
-    { id: 0, name: 'Angular', readonly: true },
-    { id: 1, name: 'React' }
+    { id: 1, name: 'Angular', readonly: true },
+    { id: 2, name: 'React' }
   ];
 
   constructor() { }

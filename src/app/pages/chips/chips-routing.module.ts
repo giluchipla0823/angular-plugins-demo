@@ -6,7 +6,8 @@ import {
   TagInputBasicComponent,
   TagInputValidationComponent,
   TagInputBasicNotRemovableItemsComponent,
-  TagInputWithObjectsComponent
+  TagInputWithObjectsComponent,
+  TagInputAutocompleteComponent
 } from '../../components/chips/index.components';
 
 const routes: Routes = [
@@ -29,6 +30,11 @@ const routes: Routes = [
     path: 'with-objects',
     component: TagInputWithObjectsComponent,
     data: { title: 'With objects' }
+  },
+  {
+    path: 'autocomplete',
+    component: TagInputAutocompleteComponent,
+    data: { title: 'Autocomplete' }
   },
   {
     path: 'validation',

@@ -8,11 +8,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { ChipsComponent } from './pages/chips/chips.component';
 import { ChipsModule } from './pages/chips/chips.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ChipsComponent,
+    ChipsComponent
   ],
   imports: [
     BrowserModule,

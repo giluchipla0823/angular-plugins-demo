@@ -10,6 +10,10 @@
   padding: 0 !important;
 }
 
+.tag-input-bs4 .ng2-dropdown-menu {
+    width: auto !important;
+}
+
 .tag-input-bs4 .ng2-tag-input.bootstrap tag {
     margin-top: .2rem;
 }

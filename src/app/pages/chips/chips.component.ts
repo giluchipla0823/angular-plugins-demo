@@ -12,6 +12,7 @@ export class ChipsComponent implements OnInit {
     { name: 'Basic', path: '/chips/basic' },
     { name: 'With not removable items', path: '/chips/with-not-removable-items' },
     { name: 'With objects', path: '/chips/with-objects' },
+    { name: 'Autocomplete', path: '/chips/autocomplete' },
     { name: 'Validation', path: '/chips/validation' }
   ];
 

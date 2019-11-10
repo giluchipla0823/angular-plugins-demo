@@ -1,0 +1,79 @@
+<div class="force-to-the-bottom form-group tag-input-bs4">
+  <label>Autcomplete with objects</label>
+  <tag-input 
+    [ngModel]="['hardocoded-item']"
+    theme="bootstrap">
+    <tag-input-dropdown
+      [autocompleteItems]="items"
+      [showDropdownIfEmpty]="true"
+      [dynamicUpdate]="false">
+    </tag-input-dropdown>
+  </tag-input>
+</div>
+
+<div class="force-to-the-bottom form-group tag-input-bs4">
+  <p>Using fake data with observable</p>
+  <tag-input 
+    [ngModel]="[]" 
+    theme="bootstrap"
+    [onlyFromAutocomplete]="true">
+      <tag-input-dropdown
+        [showDropdownIfEmpty]="true"
+        [autocompleteObservable]="requestAutocompleteItemsFakeTwo">
+          <ng-template 
+            let-item="item" 
+            let-index="index" 
+            let-last="last">
+              {{ item.display }}
+          </ng-template>
+      </tag-input-dropdown>
+  </tag-input>
+</div>
+
+<div class="force-to-the-bottom form-group tag-input-bs4">
+    <label>Using a remote endpoint with observable</label>
+    <tag-input 
+          [ngModel]="[]"
+          [placeholder]="'Enter a new repo'"
+          [onTextChangeDebounce]="500"
+          [secondaryPlaceholder]="'Search in Github'"
+          theme="bootstrap"
+          [onAdding]="onAdding"
+          [onlyFromAutocomplete]="true">
+        <tag-input-dropdown
+            [showDropdownIfEmpty]="false"
+            [autocompleteObservable]="requestAutocompleteItems"
+            [minimumTextLength]="3">
+            <ng-template let-item="item" let-index="index">
+                {{ item.display }}
+            </ng-template>
+        </tag-input-dropdown>
+    </tag-input>
+</div>
+
+<div class="force-to-the-bottom form-group tag-input-bs4">
+    <label>Using a remote endpoint without observable</label>
+    
+    <tag-input 
+      [ngModel]="[]"
+      [onlyFromAutocomplete]="true"
+      theme="bootstrap"
+      #input
+      (onTextChange)="onTextChange($event)">
+        <tag-input-dropdown
+          [autocompleteItems]="books"
+          [showDropdownIfEmpty]="false"
+          [minimumTextLength]="3"
+          [displayBy]="'title'" 
+          [identifyBy]="'id'"
+          [appendToBody]="false"
+          [dynamicUpdate]="false">
+          <ng-template let-item="item" let-index="index" let-last="last" >
+            <span [innerHTML]="item.title | highlightSearch: input.inputTextValue"></span>
+          </ng-template>
+        </tag-input-dropdown>
+
+        
+    </tag-input>
+        
+</div>
